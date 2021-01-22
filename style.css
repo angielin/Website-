@@ -1,3 +1,19 @@
 body {
     background-color: lightblue;
+    text-align: center; 
   }
+
+hr {
+    background-color: white;
+    border-style: none;
+    height: 2px;
+}
+/* change headshot to be centered */
+.headShot {
+  text-align: center; 
+}
+
+.circular {
+  border-radius: 100%;
+  background-color: whitesmoke;
+}
