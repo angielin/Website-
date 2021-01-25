@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+  background-color:#b80808;
     text-align: center; 
   }
 
@@ -16,4 +16,9 @@ hr {
 .circular {
   border-radius: 100%;
   background-color: whitesmoke;
+}
+
+.bottom-img {
+  border: none;
+  opacity: 90%;
 }
