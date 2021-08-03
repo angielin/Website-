@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
     "dev": ""
   },
   "repository": {
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/angielin/Website-#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "serve": "^11.3.2",
+    "server": "^1.0.32",
     "vercel": "^21.1.0"
   }
 }
