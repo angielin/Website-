@@ -1,7 +1,24 @@
-body {
+.top-container {
   background-color: lightblue;
   text-align: center;
   font-family: "merriweather", serif;
+}
+
+.bottom-container {
+  background-color: lightblue;
+  padding: 50px 0 20px;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+}
+
+hr {
+  border: dotted lightblue 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
 }
 
 h1 {
@@ -19,19 +36,45 @@ h3 {
   font-size: 40px;
 }
 
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
 h6 {
   font-family: "Zen Maru Gothic", sans-serif;
   font-size: 40px;
+}
+
+.contact-me {
+  margin: 100px auto auto auto;
+  border-bottom: none;
 }
 
 .middle-container {
   background-color: whitesmoke;
 }
 
+a {
+  color: #11999e;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: bold;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
 /* change headshot to be centered */
 .headShot {
   width: 15%;
   text-align: center;
+  border-top: 100%;
 }
 
 .circular {
@@ -58,4 +101,8 @@ h6 {
 .running-img {
   float: right;
   margin-left: 30px;
+}
+
+.copywrite {
+  font-family: "Zen Maru Gothic", sans-serif;
 }
