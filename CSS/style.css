@@ -1,0 +1,61 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+  font-family: "merriweather", serif;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: "Sacramento", cursive;
+}
+
+h2 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 40px;
+}
+
+h3 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 40px;
+}
+
+h6 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 40px;
+}
+
+.middle-container {
+  background-color: whitesmoke;
+}
+
+/* change headshot to be centered */
+.headShot {
+  width: 15%;
+  text-align: center;
+}
+
+.circular {
+  border-radius: 100%;
+  background-color: whitesmoke;
+}
+
+.icons {
+  font-size: 5px;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.code-img {
+  float: left;
+  margin-right: 30px;
+}
+
+.running-img {
+  float: right;
+  margin-left: 30px;
+}
