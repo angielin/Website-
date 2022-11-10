@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/angielin/Website-#readme",
   "dependencies": {
-    "serve": "^11.3.2",
+    "serve": "^14.1.1",
     "vercel": "^21.1.0"
   }
 }
