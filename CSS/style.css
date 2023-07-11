@@ -114,12 +114,6 @@ a:hover {
 .headShot {
   width: 15%;
   text-align: center;
-  border-top: 100%;
-}
-
-.circular {
-  border-radius: 100%;
-  background-color: whitesmoke;
 }
 
 .icons {
