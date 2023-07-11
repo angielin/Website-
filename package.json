@@ -4,6 +4,7 @@
   "description": "This is a personal website for me to tryout/practice my HTML/CSS/JavaScript/React.",
   "main": "index.js",
   "scripts": {
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": ""
   },
@@ -20,5 +21,8 @@
   "dependencies": {
     "serve": "^11.3.2",
     "vercel": "^21.1.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
