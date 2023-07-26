@@ -1,5 +1,4 @@
 .top-container {
-  background-color: #f2f2f2;
   text-align: center;
   font-family: "Zen Maru Gothic", serif;
 }
@@ -46,15 +45,6 @@ h5 {
   width: 15%;
 }
 
-.middle-container {
-  background-color: black;
-}
-
-.bottom-container {
-  background-color: black;
-  padding-bottom: 50px 0 20px;
-}
-
 .icons {
   font-size: 5px;
 }
@@ -62,6 +52,11 @@ h5 {
 .profile {
   margin: 100px auto 100px auto;
   width: 50%;
+}
+
+.bottom-container {
+  position: relative;
+  bottom: 0px;
 }
 
 .skill-row {
