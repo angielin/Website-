@@ -10,64 +10,48 @@
     />
   </head>
   <body>
-    <div class="top-container">
-      <span
-        class="menu"
-        style="font-size: 30px; cursor: pointer"
-        onclick="openNav()"
-        >&#9776;
-      </span>
-      <!-- Adds Headshot Photo -->
-      <img class="headShot" src="./headshot.png" alt="404" />
-      <h1>Angie Lin</h1>
-    </div>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
+    <div id="myTopnav" class="topnav">
       <a href="contact.html">Contact</a>
       <a href="Hobbies.html">Hobbies</a>
-      <a href="">About</a>
+      <a href="work.html">Work</a>
+      <a href="index.html">Home</a>
+    </div>
+    <div class="top-container">
+      <!-- Adds Headshot Photo -->
+      <img class="headShot circular" src="./headshot.png" alt="404" />
     </div>
     <div class="middle-container">
       <div class="profile">
-        <img src="" alt="" />
-        <h2>My Education</h2>
-        <p>San Francisco State University</p>
+        <h2>About Angie</h2>
+        <p>
+          Angie is a full time software engineer based out of San Fransico. She
+          is a Taiwanese American and has worked for five years across an array
+          of engineering teams. She enjoys fullstack and firmware development
+          and aims to continuously technically challenge herself.
+        </p>
       </div>
-      <hr />
-      <div class="skills">
-        <h3>My Skills</h3>
-        <div class="skill-row">
-          <img class="code-img" src="./Code.png" alt="404" />
-          <h4>Software Development</h4>
-          <p>
-            I enjoy web development and technically challenging myself. I have a
-            very nontraditional route into software engineering but as a result,
-            can ship quality code because I understand the development cycle
-            from different perspectives.
-          </p>
-        </div>
-        <div class="skill-row">
-          <img class="running-img" src="./Running.png" alt="404" />
-          <h5>Running</h5>
-          <p>
-            In my free time, I enjoy running or being outdoors. It gives me the
-            opportunity to clear my head and get some fresh air. Recently I
-            tried trail running which was very intensive but an enjoyable
-            challenge!
-          </p>
-        </div>
+      <div class="skill-row">
+        <img class="code-img" src="./Code.png" alt="404" />
+        <h4>Software Development</h4>
+        <p>
+          I enjoy web development and technically challenging myself. I have a
+          very nontraditional route into software engineering but as a result,
+          can ship quality code because I understand the development cycle from
+          different perspectives.
+        </p>
       </div>
-      <hr />
-      <div class="contact-me">
-        <h6>Get In Touch</h6>
-        <h7>Feel free to shoot me an email and lets have a chat.</h7>
-        <p></p>
+      <div class="skill-row">
+        <img class="running-img" src="./Running.png" alt="404" />
+        <h5>Running</h5>
+        <p>
+          In my free time, I enjoy running or being outdoors. It gives me the
+          opportunity to clear my head and get some fresh air. Recently I tried
+          trail running which was very intensive but an enjoyable challenge!
+        </p>
       </div>
     </div>
     <div class="bottom-container">
-      <a class="linkedin-link" href="https://www.linkedin.com/in/angielin22"
+        <a class="linkedin-link" href="https://www.linkedin.com/in/angielin22"
         >LinkedIn</a
       >
       <a class="github-link" href="https://github.com/angielin">Github</a>
@@ -78,19 +62,6 @@
         <a href="https://www.flaticon.com/" title="Flaticon"
           >www.flaticon.com</a
         >
-      </div>
     </div>
-
-    <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-      }
-    </script>
   </body>
 </html>
