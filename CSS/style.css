@@ -55,8 +55,8 @@ h5 {
 }
 
 .bottom-container {
-  position: relative;
-  bottom: 0px;
+  position: fixed;
+  bottom: 10px;
 }
 
 .skill-row {
