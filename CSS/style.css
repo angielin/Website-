@@ -55,8 +55,10 @@ h5 {
 }
 
 .bottom-container {
-  position: fixed;
-  bottom: 10px;
+  width: 100%;
+  height: auto;
+  background-color: #365168;
+  padding: 20px;
 }
 
 .skill-row {
