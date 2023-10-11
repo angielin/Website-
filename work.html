@@ -3,16 +3,50 @@
   <head>
     <link rel="stylesheet" href="./CSS/style.css" />
     <meta charset="utf-8" />
-    <title>Hobbies - theAngieLin</title>
+    <title>Work - theAngieLin</title>
   </head>
   <body>
     <div id="myTopnav" class="topnav">
-      <a href="contact.html">Contact</a>
-      <a href="Hobbies.html">Hobbies</a>
-      <a href="work.html">Work</a>
-      <a href="index.html">Home</a>
+      <a href="contact">Contact</a>
+      <a href="Hobbies">Hobbies</a>
+      <a href="work">Work</a>
+      <a href="index">Home</a>
     </div>
-    <div class="middle-container"></div>
+    <div class="container">
+      <div class="search-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" placeholder="Enter your location">
+        <button class="fa-solid fa-magnifying-glass"></button>
+      </div>
+
+      <div class="not-found">
+        <img src="images/404.png">
+        <p>Oops! Invalid location</p>
+      </div>
+
+      <div class="weather-box">
+        <img src="">
+        <p class="temperature"></p>
+        <p class="description"></p>
+      </div>
+
+      <div class="weather-details">
+        <div class="humidity">
+          <i class="fa-solid fa-water"></i>
+          <div class="text">
+            <span></span>
+            <p>humidity</p>
+          </div>
+        </div>
+        <div class="wind">
+          <i class="fa-solid fa-wind"></i>
+          <div class="text">
+            <span></span>
+            <p>wind speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="bottom-container">
         <a class="linkedin-link" href="https://www.linkedin.com/in/angielin22"
         >LinkedIn</a
@@ -26,5 +60,7 @@
           >www.flaticon.com</a
         >
     </div>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="weather.js"></script>
   </body>
 </html>
