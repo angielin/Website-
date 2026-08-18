@@ -1,94 +1,437 @@
-.top-container {
-  text-align: center;
-  font-family: "Zen Maru Gothic", serif;
+/* ==========================================================================
+   Design tokens
+   Palette, type scale and spacing rhythm are modeled after etched.com's
+   monochrome / hairline-grid aesthetic (Sohne + Sohne Mono swapped for the
+   redistributable Inter + IBM Plex Mono).
+   ========================================================================== */
+:root {
+  --font-sans: "Inter", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-bg: #ededed;
+  --color-surface: #ffffff;
+  --color-text: #000000;
+  --color-text-secondary: rgba(0, 0, 0, 0.7);
+  --color-text-faint: rgba(0, 0, 0, 0.45);
+  --color-line: rgba(0, 0, 0, 0.14);
+  --color-fill: rgba(0, 0, 0, 0.04);
+
+  --navbar-height: 64px;
+  --gutter: 24px;
+  --content-width: 960px;
+  --space-section-y: 96px;
+  --space-section-y-mobile: 64px;
+  --space-gap: 24px;
+  --space-gap-loose: 32px;
+  --radius: 6px;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
+@media (min-width: 700px) {
+  :root {
+    --gutter: 48px;
+  }
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+/* ==========================================================================
+   Reset / base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  text-align: center;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+p {
   margin: 0;
 }
 
-h2 {
-  font-family: "Zen Maru Gothic", sans-serif;
-  font-size: 40px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-h4 {
-  font-size: 20px;
+/* ==========================================================================
+   Layout shell
+   ========================================================================== */
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
-h5 {
-  font-size: 20px;
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin-bottom: 12px;
 }
 
-/* change headshot to be centered */
-.headShot {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 15%;
+.section {
+  border-top: 1px solid var(--color-line);
+  padding: var(--space-section-y-mobile) 0;
 }
 
-.icons {
-  font-size: 5px;
+@media (min-width: 700px) {
+  .section {
+    padding: var(--space-section-y) 0;
+  }
 }
 
-.profile {
-  margin: 100px auto 100px auto;
-  width: 50%;
+.section-heading {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: var(--space-gap);
 }
 
-.bottom-container {
-  position: relative;
-  bottom: 0px;
+/* ==========================================================================
+   Header / nav
+   ========================================================================== */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-height);
+  padding: 0 var(--gutter);
+  background: rgba(237, 237, 237, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-line);
 }
 
+.topnav .brand {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.topnav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.topnav a {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background-color 0.15s ease;
+}
+
+.topnav a:hover {
+  background: var(--color-fill);
+}
+
+.topnav a.is-active {
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  padding: 56px 0 var(--space-section-y-mobile);
+  display: grid;
+  gap: var(--space-gap-loose);
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .hero {
+    padding-top: 88px;
+    padding-bottom: var(--space-section-y);
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  max-width: 46ch;
+}
+
+.hero-portrait {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  padding: var(--space-gap);
+  justify-self: center;
+}
+
+.hero-portrait img {
+  width: 220px;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Skill rows / content cards
+   ========================================================================== */
 .skill-row {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-  line-height: 2;
+  display: grid;
+  gap: var(--space-gap-loose);
+  align-items: start;
 }
 
-.code-img {
-  float: left;
-  margin-right: 30px;
+@media (min-width: 700px) {
+  .skill-row {
+    grid-template-columns: 96px 1fr;
+  }
+
+  .skill-row.reverse {
+    grid-template-columns: 1fr 96px;
+  }
+
+  .skill-row.reverse .skill-icon {
+    order: 2;
+  }
 }
 
-.running-img {
-  float: right;
-  margin-left: 30px;
+.skill-icon {
+  width: 64px;
+  height: 64px;
+  padding: 12px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.skill-row h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.skill-row p {
+  color: var(--color-text-secondary);
+}
+
+.skill-row + .skill-row {
+  margin-top: var(--space-gap-loose);
+}
+
+/* ==========================================================================
+   Tags / badges (used on work.html)
+   ========================================================================== */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: var(--space-gap);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 8px 14px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: var(--color-surface);
+}
+
+.empty-state {
+  margin-top: var(--space-gap-loose);
+  padding: var(--space-gap-loose);
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius);
+  color: var(--color-text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   Simple list (used on Hobbies.html)
+   ========================================================================== */
+.list-plain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-line);
+}
+
+.list-plain li {
+  background: var(--color-surface);
+  padding: 18px var(--space-gap);
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.list-plain .index {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-faint);
+  width: 24px;
+}
+
+/* ==========================================================================
+   Forms (used on contact.html)
+   ========================================================================== */
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap);
+  max-width: 520px;
+  margin-top: var(--space-gap-loose);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-text);
+}
+
+.btn {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  border: 1px solid var(--color-text);
+  border-radius: 999px;
+  background: var(--color-text);
+  color: var(--color-surface);
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.contact-email {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.bottom-container {
+  border-top: 1px solid var(--color-line);
+  padding: var(--space-gap-loose) var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-gap);
+}
+
+.footer-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.bottom-container a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.bottom-container a:hover {
+  background: var(--color-fill);
 }
 
 .copywrite {
-  font-family: "Zen Maru Gothic", sans-serif;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-faint);
+  order: 3;
+  width: 100%;
 }
 
 .icons {
-  font-size: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-faint);
+  order: 4;
+  width: 100%;
 }
 
-a {
-  font-family: "Zen Maru Gothic", sans-serif;
-  margin: 10px 20px;
+.icons a {
+  padding: 0;
+  border-radius: 0;
+  text-decoration: underline;
 }
 
-a:hover {
-  color: black;
+.icons a:hover {
+  background: none;
 }

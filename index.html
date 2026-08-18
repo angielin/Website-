@@ -3,66 +3,90 @@
   <head>
     <link rel="stylesheet" href="./CSS/style.css" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>theAngieLin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Sacramento&family=Zen+Maru+Gothic:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div id="myTopnav" class="topnav">
-      <a href="contact.html">Contact</a>
-      <a href="Hobbies.html">Hobbies</a>
-      <a href="work.html">Work</a>
-      <a href="index.html">Home</a>
-    </div>
-    <div class="top-container">
-      <!-- Adds Headshot Photo -->
-      <img class="headShot" src="./headshot.png" alt="404" />
-    </div>
-    <div class="middle-container">
-      <div class="profile">
-        <h2>About Angie</h2>
-        <p>
-          Angie is a full time software engineer based out of San Fransico. She
-          is a Taiwanese American and has worked for five years across an array
-          of engineering teams. She enjoys fullstack and firmware development
-          and aims to continuously technically challenge herself.
-        </p>
-      </div>
-      <div class="skill-row">
-        <img class="code-img" src="./Code.png" alt="404" />
-        <h4>Software Development</h4>
-        <p>
-          Angie has worked for Samsara, The Realreal and Span io working on both software 
-          and firmware engineering teams. She enjoys shipping new products/features to customers. 
-          She has a very nontraditional route into engineering but as a result, can ship 
-          quality code because she understand the development cycle from different perspectives.
-        </p>
-      </div>
-      <div class="skill-row">
-        <img class="running-img" src="./Running.png" alt="404" />
-        <h5>Running</h5>
-        <p>
-          In her free time, she enjoys running or any outdoor activities. It gives her the
-          opportunity to just get outside and get some fresh air. Recently she completed
-          the San Francisco Half Marathong (1st route) and is currently training 
-          for a full marathon.
-        </p>
+      <a class="brand" href="index.html">Angie Lin</a>
+      <div class="nav-links">
+        <a class="is-active" href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="Hobbies.html">Hobbies</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
+
+    <div class="container">
+      <div class="hero">
+        <div>
+          <span class="eyebrow">Device Software Engineer — San Francisco</span>
+          <h1>Hi, I'm Angie.</h1>
+          <p>
+            Angie is a full time software engineer based out of San Fransico. She
+            is a Taiwanese American and has worked for five years across an array
+            of engineering teams. She enjoys fullstack and firmware development
+            and aims to continuously technically challenge herself.
+          </p>
+        </div>
+        <div class="hero-portrait">
+          <img class="headShot" src="./headshot.png" alt="Portrait of Angie Lin" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <span class="eyebrow">Software Development</span>
+        <div class="skill-row">
+          <img class="skill-icon" src="./Code.png" alt="" />
+          <div>
+            <h3>Shipping full stack &amp; firmware</h3>
+            <p>
+              Angie has worked for Samsara, The Realreal and Span io working on both software
+              and firmware engineering teams. She enjoys shipping new products/features to customers.
+              She has a very nontraditional route into engineering but as a result, can ship
+              quality code because she understand the development cycle from different perspectives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <span class="eyebrow">Off the clock</span>
+        <div class="skill-row reverse">
+          <img class="skill-icon" src="./Running.png" alt="" />
+          <div>
+            <h3>Running</h3>
+            <p>
+              In her free time, she enjoys running or any outdoor activities. It gives her the
+              opportunity to just get outside and get some fresh air. Recently she completed
+              the San Francisco Half Marathong (1st route) and is currently training
+              for a full marathon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="bottom-container">
-        <a class="linkedin-link" href="https://www.linkedin.com/in/angielin22"
-        >LinkedIn</a
-      >
-      <a class="github-link" href="https://github.com/angielin">Github</a>
+      <div class="footer-links">
+        <a class="linkedin-link" href="https://www.linkedin.com/in/angielin22">LinkedIn</a>
+        <a class="github-link" href="https://github.com/angielin">Github</a>
+      </div>
       <p class="copywrite">© 2018 Lin Productions</p>
       <div class="icons">
         Icons made by
         <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
-        <a href="https://www.flaticon.com/" title="Flaticon"
-          >www.flaticon.com</a
-        >
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+      </div>
     </div>
   </body>
 </html>
