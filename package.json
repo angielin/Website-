@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "This is a personal website for me to tryout/practice my HTML/CSS/JavaScript/React.",
   "main": "index.js",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,10 +23,10 @@
   "homepage": "https://github.com/angielin/Website-#readme",
   "dependencies": {
     "nodemon": "^3.0.1",
-    "serve": "^11.3.2",
-    "vercel": "^21.1.0"
+    "serve": "^11.3.2"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "vercel": "^21.1.0"
   }
 }
