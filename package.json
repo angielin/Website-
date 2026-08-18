@@ -20,10 +20,10 @@
   "homepage": "https://github.com/angielin/Website-#readme",
   "dependencies": {
     "nodemon": "^3.0.1",
-    "serve": "^11.3.2",
-    "vercel": "^21.1.0"
+    "serve": "^11.3.2"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "vercel": "^21.1.0"
   }
 }
